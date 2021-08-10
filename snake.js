@@ -4,6 +4,7 @@ export const SNAKE_SPEED = 5
 const snakeBody = [{ x: 5, y: 5 }]
 let newSegments = 0
 export let snakeHead = snakeBody[0]
+let bodyMinusHead = []
 
 export function updateSnake() {
   addSegments()
@@ -16,13 +17,13 @@ export function updateSnake() {
   snakeHead.y += inputDirection.y
 }
 
-export function drawSnake(gameBoard) {
+export function drawSnake() {
   snakeBody.forEach(segment => {
     const snakeElement = document.createElement('div')
     snakeElement.style.gridRowStart = segment.y
     snakeElement.style.gridColumnStart = segment.x
     snakeElement.classList.add('snake')
-    gameBoard.appendChild(snakeElement)
+    document.querySelector("#game-board").appendChild(snakeElement)
   })
 }
 
@@ -30,17 +31,20 @@ export function expandSnake(amount) {
   newSegments += amount
 }
 
-export function onSnake(position, { ignoreHead = false } = {}) {
-  return snakeBody.some((segment, index) => {
-    if (ignoreHead && index === 0) return false
-      if (segment.x === position.x && segment.y === position.y) {
-        return true
-      }
-  })
+export function onSnake(position) {
+  for (let i = 0; i < snakeBody.length; i++) {
+    if (snakeBody[i].x === position.x && snakeBody[i].y === position.y) {
+      return true
+    }
+  }
 }
 
 export function snakeIntersection() {
-  return onSnake(snakeBody[0], { ignoreHead: true })
+  for (let i = 1; i < snakeBody.length; i++) {
+    if (snakeBody[i].x == snakeHead.x && snakeBody[i].y == snakeHead.y) {
+      return true
+    }
+  }
 }
 
 function addSegments() {

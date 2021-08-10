@@ -1,5 +1,5 @@
 import { updateSnake, drawSnake, SNAKE_SPEED, snakeHead, snakeIntersection } from './snake.js'
-import { updateFood, drawFood } from './food.js'
+import { updateFood, drawFood } from './apple.js'
 import { outsideGrid } from './grid.js'
 
 let lastRenderTime = 0

@@ -1,0 +1,23 @@
+body {
+  border: solid blue;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 2fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+#Title, .Header, .Instructions {
+  grid-column: span 3;
+}
+
+button {
+  width: 100%;
+  height: 100%;
+  color: green;
+  background-color: black;
+  border-radius: 5px;
+  font-size: 1.5rem;
+}
+
+
