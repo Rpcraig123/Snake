@@ -1,7 +1,7 @@
 import { getInputDirection } from "./input.js"
 
-export const snakeSpeed = 1
-const snakeBody = [{x: 5, y: 5}]
+export const snakeSpeed = 5
+const snakeBody = [{x: 5, y: 5},{x: 5, y: 6},{x: 5, y: 7}]
 
 export function update() {
   const inputDirection = getInputDirection()
