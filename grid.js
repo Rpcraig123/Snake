@@ -1,9 +1,9 @@
-let gridSize = 20
+export let gridSize = 20
 
 export function randomGridPosition() {
   return {
-    x: Math.floor(Math.random() * gridSize) + 1,
-    y: Math.floor(Math.random() * gridSize) + 1
+    x: Math.ceil(Math.random() * gridSize),
+    y: Math.ceil(Math.random() * gridSize)
   }
 }
 

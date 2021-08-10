@@ -1,6 +1,7 @@
-const easy_button = document.getElementById("Easy")
-const medium_button = document.getElementById("Medium")
-const hard_button = document.getElementById("Hard")
+const play_button = document.getElementById("Play")
+// const easy_button = document.getElementById("Easy")
+// const medium_button = document.getElementById("Medium")
+// const hard_button = document.getElementById("Hard")
 
 // inc_button.addEventListener('click', incCount)
 // inc_button.addEventListener('mouseover', revColI)

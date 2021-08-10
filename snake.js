@@ -4,7 +4,6 @@ export const SNAKE_SPEED = 5
 const snakeBody = [{ x: 5, y: 5 }]
 let newSegments = 0
 export let snakeHead = snakeBody[0]
-let bodyMinusHead = []
 
 export function updateSnake() {
   addSegments()
