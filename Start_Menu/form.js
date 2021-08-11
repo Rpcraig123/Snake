@@ -1,4 +1,14 @@
 const play_button = document.getElementById("Play")
+
+play_button.addEventListener('click', revCol)
+
+function revCol() {
+  play_button.style.color ="green";
+  play_button.style.backgroundColor ="black";
+  const root = document.querySelector(":root");
+  root.style.setProperty("--color",'black')
+}
+
 // const easy_button = document.getElementById("Easy")
 // const medium_button = document.getElementById("Medium")
 // const hard_button = document.getElementById("Hard")
