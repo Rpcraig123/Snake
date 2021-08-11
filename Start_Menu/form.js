@@ -7,7 +7,7 @@ function revCol() {
   play_button.style.backgroundColor ="black";
   const root = document.querySelector(":root");
   root.style.setProperty("--color",'black')
-  location.href = "../game.html"
+  location.href = "/Game/game.html"
 }
 
 // const easy_button = document.getElementById("Easy")
