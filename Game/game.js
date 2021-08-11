@@ -30,14 +30,6 @@ function main(currentTime) {
 
 window.requestAnimationFrame(main)
 
-// document.onload = function setUp() {
-//   for (i = 1; i < Math.pow(gridSize,2); i++) {
-//     let blankElement = document.createElement('div')
-//     blankElement.classList.add('blank')
-//     document.querySelector("#game-board").appendChild(blankElement)
-//   }
-// }
-
 function update() {
   updateSnake()
   updateFood()
