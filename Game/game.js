@@ -1,24 +1,20 @@
 import { updateSnake, drawSnake, SNAKE_SPEED, snakeHead, snakeIntersection } from './snake.js'
-import { updateFood, drawFood, points, point_dis } from './apple.js'
-import { outsideGrid, gridSize } from './grid.js'
+import { updateFood, drawFood } from './apple.js'
+import { outsideGrid } from './grid.js'
 
 let lastRenderTime = 0
 let gameOver = false
 const gameBoard = document.getElementById('game-board')
 // const highScore = document.getElementById('HS')
 let gameOverSound = new Audio("defeat.mp3");
+const restartButtton = document.querySelector('#Restart')
+const go_Text = document.querySelector('.game_over')
 
 function main(currentTime) {
   if (gameOver === true) {
     gameOverSound.play()
-    if (confirm(`GAME OVER!\nScore = ${points}\nPress OK to restart.`)) {
-      // highScore.innerHTML = `High Score: ${points}`
-      // point_dis.innerHTML = `Points: 0`
-      window.location.reload()
-    }
-    else {
-      alert("GAME OVER! - Refresh the page to continue (temporary)")
-    }
+    restartButtton.style.opacity = 1
+    go_Text.style.opacity = 1
     return
   }
   
@@ -52,3 +48,30 @@ function checkDeath() {
   }
 }
 
+restartButtton.addEventListener('click', restart)
+
+function restart() {
+  window.location.reload()
+  // let prevSnakes = document.querySelectorAll('.snake')
+  // for (let i=0;i<prevSnakes.length;i++) {
+  //   document.querySelector('#game-board').removeChild(prevSnakes[i])
+  // }
+  // let prevApple = document.querySelectorAll('.apple')
+  // for (let i=0;i<prevApple.length;i++) {
+  //   document.querySelector('#game-board').removeChild(prevApple[i])
+  // }
+  // let newSnakeElement = document.createElement('div')
+  // newSnakeElement.style.gridRowStart = 17
+  // newSnakeElement.style.gridColumnStart = 12
+  // newSnakeElement.classList.add('snake')
+  // document.querySelector("#game-board").appendChild(newSnakeElement)
+  // let newApple = document.createElement('div')
+  // newApple.style.gridRowStart = Math.ceil(Math.random() * 20)
+  // newApple.style.gridColumnStart = Math.ceil(Math.random() * 20)
+  // newApple.classList.add('apple')
+  // document.querySelector("#game-board").appendChild(newApple)
+  // restartButtton.style.opacity = 0
+  // go_Text.style.opacity = 0
+  // window.requestAnimationFrame(main)
+  // window.requestAnimationFrame(main)
+}

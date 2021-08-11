@@ -11,7 +11,7 @@ export function updateFood() {
   if (onSnake(apple) === true) {
     points += 1
     sound.play()
-    point_dis.innerHTML = `Points: ${points}`
+    point_dis.innerHTML = `Points:${points}`
     expandSnake(snakeGrowth)
     apple = getRandomFoodPosition()
   }
@@ -25,7 +25,7 @@ export function drawFood() {
   document.querySelector("#game-board").appendChild(appleElement)
 }
 
-function getRandomFoodPosition() {
+ export function getRandomFoodPosition() {
   let newFoodPosition = randomGridPosition()
   while (newFoodPosition == null || onSnake(newFoodPosition) === true) {
     newFoodPosition = randomGridPosition()
