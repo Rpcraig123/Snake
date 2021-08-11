@@ -4,6 +4,7 @@ let lastInputDirection = { x: 0, y: 0 }
 window.addEventListener('keydown', moveSnake)
 
 function moveSnake(e) {
+  e.preventDefault()
   switch (e.key) {
     case 'ArrowUp':
       if (lastInputDirection.y !== 0) break

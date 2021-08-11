@@ -1,7 +1,10 @@
 import { getInputDirection } from "./input.js"
+// import { snakeBody } from "./game.js"
 
-export const SNAKE_SPEED = 5
-const snakeBody = [{ x: 5, y: 5 }]
+export const SNAKE_SPEED = 7
+let snakeBody = [
+  { x: 12, y: 17 }
+]
 let newSegments = 0
 export let snakeHead = snakeBody[0]
 

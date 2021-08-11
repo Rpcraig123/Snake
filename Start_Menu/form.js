@@ -1,4 +1,9 @@
 const play_button = document.getElementById("Play")
+let intro = new Audio("Intro.mp3");
+
+window.onload=function() {
+  intro.play()
+}
 
 play_button.addEventListener('click', revCol)
 

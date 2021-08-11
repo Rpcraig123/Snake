@@ -1,14 +1,19 @@
 import { updateSnake, drawSnake, SNAKE_SPEED, snakeHead, snakeIntersection } from './snake.js'
-import { updateFood, drawFood } from './apple.js'
+import { updateFood, drawFood, points, point_dis } from './apple.js'
 import { outsideGrid, gridSize } from './grid.js'
 
 let lastRenderTime = 0
 let gameOver = false
 const gameBoard = document.getElementById('game-board')
+// const highScore = document.getElementById('HS')
+let gameOverSound = new Audio("defeat.mp3");
 
 function main(currentTime) {
   if (gameOver === true) {
-    if (confirm('You lost. Press ok to restart.')) {
+    gameOverSound.play()
+    if (confirm(`GAME OVER!\nScore = ${points}\nPress OK to restart.`)) {
+      // highScore.innerHTML = `High Score: ${points}`
+      // point_dis.innerHTML = `Points: 0`
       window.location.reload()
     }
     else {

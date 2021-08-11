@@ -6,24 +6,33 @@ body {
   align-items: center;
   margin: 0;
   background: black;
+  grid-template-columns: 5fr 1fr;
+  font-family: 'Press Start 2P', cursive;
 }
 
 #game-board {
-  background: white;
-  width: 100vmin;
-  height: 100vmin;
+  border: solid green 10px;
+  background: black;
+  width: 80vmin;
+  height: 80vmin;
   display: grid;
   grid-template-rows: repeat(20, 1fr);
   grid-template-columns: repeat(20, 1fr);
-  grid-gap: 5px;
+}
+
+#score-board {
+  color: white;
+  padding-left: 50px;
+}
+
+.sbText {
+  padding: 25px 0;
 }
 
 .snake {
-  background-color: blue;
-  border: .25vmin solid black;
+  background-color: white;
 }
 
 .apple {
   background-color: red;
-  border: .25vmin solid black;
 }
