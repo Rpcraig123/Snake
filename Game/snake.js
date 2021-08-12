@@ -1,9 +1,7 @@
 import { getInputDirection } from "./input.js"
 
 export const SNAKE_SPEED = 7
-let snakeBody = [
-  { x: 12, y: 17 }
-]
+let snakeBody = [{ x: 12, y: 17 }]
 let newSegments = 0
 export let snakeHead = snakeBody[0]
 

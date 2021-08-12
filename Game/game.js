@@ -24,7 +24,9 @@ function main(currentTime) {
   draw()
   checkDeath()
 }
+
 window.requestAnimationFrame(main)
+
 function update() {
   updateSnake()
   updateFood()
