@@ -12,6 +12,8 @@
 
 I will be building Snake utilizing HTML/CSS/JavaScript. This project will be be featured on my professional portfolio.
 
+***
+
 ### *Game Instructions*
 
 * The game begins with a snake that is one unit in length (white) and a piece of food randomly placed on the board (red).
@@ -26,6 +28,8 @@ I will be building Snake utilizing HTML/CSS/JavaScript. This project will be be 
 - [ ] A game restart without refreshing the page.
 - [ ] More responsive webpage
 - [ ] Difficulty Settings
+
+***
 
 **Credits**:
 
