@@ -10,7 +10,7 @@
 
 ### *Description*
 
-I will be building Snake utilizing HTML/CSS/JavaScript. This project will be be featured on my professional portfolio.
+Snake built utilizing HTML/CSS/JavaScript. This project is also deployed using surge and available to play using the link above!
 
 ***
 
