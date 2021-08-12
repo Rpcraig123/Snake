@@ -29,8 +29,6 @@ I will be building Snake utilizing HTML/CSS/JavaScript. This project will be be 
 - [ ] More responsive webpage
 - [ ] Difficulty Settings
 
-***
+<!-- *** -->
 
-**Credits**:
-
-Snake Gif: [Link](https://miro.medium.com/max/1600/1*dQzFEaAHwxouaImAuUd3EQ.gif)
+<!-- **Credits**: -->
