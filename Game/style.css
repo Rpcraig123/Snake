@@ -27,10 +27,6 @@ body {
   justify-self: center;
 }
 
-.sbText {
-
-}
-
 .game_over {
   opacity: 0;
   color: white;
