@@ -5,7 +5,6 @@ import { outsideGrid } from './grid.js'
 let lastRenderTime = 0
 let gameOver = false
 const gameBoard = document.getElementById('game-board')
-// const highScore = document.getElementById('HS')
 let gameOverSound = new Audio("defeat.mp3");
 const restartButtton = document.querySelector('#Restart')
 const go_Text = document.querySelector('.game_over')
@@ -52,26 +51,4 @@ restartButtton.addEventListener('click', restart)
 
 function restart() {
   window.location.reload()
-  // let prevSnakes = document.querySelectorAll('.snake')
-  // for (let i=0;i<prevSnakes.length;i++) {
-  //   document.querySelector('#game-board').removeChild(prevSnakes[i])
-  // }
-  // let prevApple = document.querySelectorAll('.apple')
-  // for (let i=0;i<prevApple.length;i++) {
-  //   document.querySelector('#game-board').removeChild(prevApple[i])
-  // }
-  // let newSnakeElement = document.createElement('div')
-  // newSnakeElement.style.gridRowStart = 17
-  // newSnakeElement.style.gridColumnStart = 12
-  // newSnakeElement.classList.add('snake')
-  // document.querySelector("#game-board").appendChild(newSnakeElement)
-  // let newApple = document.createElement('div')
-  // newApple.style.gridRowStart = Math.ceil(Math.random() * 20)
-  // newApple.style.gridColumnStart = Math.ceil(Math.random() * 20)
-  // newApple.classList.add('apple')
-  // document.querySelector("#game-board").appendChild(newApple)
-  // restartButtton.style.opacity = 0
-  // go_Text.style.opacity = 0
-  // window.requestAnimationFrame(main)
-  // window.requestAnimationFrame(main)
 }

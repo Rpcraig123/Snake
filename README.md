@@ -28,7 +28,3 @@ Snake built utilizing HTML/CSS/JavaScript. This project is also deployed using s
 - [ ] A game restart without refreshing the page.
 - [ ] More responsive webpage
 - [ ] Difficulty Settings
-
-<!-- *** -->
-
-<!-- **Credits**: -->
