@@ -5,7 +5,7 @@
 [LinkedIn](https://www.linkedin.com/in/ryancraigeit/)
 
 ***
-![game](https://miro.medium.com/max/1600/1*dQzFEaAHwxouaImAuUd3EQ.gif)
+![game](SnakeGame.gif)
 ***
 
 ### *Description*
