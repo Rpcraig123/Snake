@@ -2,7 +2,8 @@
 ## Date Started: 8/9/21
 ### By: Ryan Craig
 
-[LinkedIn](https://www.linkedin.com/in/ryancraigeit/)
+[LinkedIn](https://www.linkedin.com/in/ryancraigeit/) | 
+[Play Game](https://snake8bit.surge.sh/)
 
 ***
 ![game](SnakeGame.gif)
