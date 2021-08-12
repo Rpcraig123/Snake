@@ -11,7 +11,7 @@ export function updateFood() {
   if (onSnake(apple) === true) {
     points += 1
     sound.play()
-    point_dis.innerHTML = `Points:${points}`
+    point_dis.innerHTML = `Points: ${points}`
     expandSnake(snakeGrowth)
     apple = getRandomFoodPosition()
   }
