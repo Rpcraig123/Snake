@@ -28,6 +28,12 @@ export function drawApple() {
     x: Math.ceil(Math.random() * 20),
     y: Math.ceil(Math.random() * 20)
   }
+  let snakeCells = document.querySelectorAll('.snake')
+  for (let i = 1; i < snakeCells.length; i++) {
+    if (snakeCells[i].style.gridColumnStart == newApplePos.x && snakeCells[i].style.gridRowStart == newApplePos.y) {
+      apple = getRandomPos()
+    }
+  }
   return newApplePos
 }
   
