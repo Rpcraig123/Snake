@@ -32,12 +32,8 @@ body {
   position: relative;
 }
 
-:root {
-  --color: green;
-}
-
 #Play:hover {
-  box-shadow: inset 200px 0 0 0 var(--color);
+  box-shadow: inset 200px 0 0 0 green;
   color: white;
 }
 

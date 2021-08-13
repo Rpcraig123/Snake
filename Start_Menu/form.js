@@ -11,6 +11,5 @@ function revCol() {
   play_button.style.color ="green";
   play_button.style.backgroundColor ="black";
   const root = document.querySelector(":root");
-  root.style.setProperty("--color",'black')
   location.href = "/Game/game.html"
 }
