@@ -1,33 +1,33 @@
 let inputDir = { x: 0, y: 0 }
 let lastInputDir = inputDir
-export const snakeSpeed = 7
 let snakeBody = [{ x: 12, y: 17 }]
-let newSegments = 0
+let newSquares = 0
 export let snakeHead = snakeBody[0]
+export const snakeSpeed = 7
 
 export function updateSnake() {
-  addSegments()
-  const inputDirection = getInputDirection()
+  addSquares()
+  const inputDir = getInputDir()
   for (let i = snakeBody.length - 2; i >= 0; i--) {
     snakeBody[i + 1] = { ...snakeBody[i] }
   }
   snakeHead = snakeBody[0]
-  snakeHead.x += inputDirection.x
-  snakeHead.y += inputDirection.y
+  snakeHead.x += inputDir.x
+  snakeHead.y += inputDir.y
 }
 
 export function drawSnake() {
-  snakeBody.forEach(segment => {
+  snakeBody.forEach(square => {
     const snakeElement = document.createElement('div')
-    snakeElement.style.gridRowStart = segment.y
-    snakeElement.style.gridColumnStart = segment.x
+    snakeElement.style.gridRowStart = square.y
+    snakeElement.style.gridColumnStart = square.x
     snakeElement.classList.add('snake')
     document.querySelector("#game-board").appendChild(snakeElement)
   })
 }
 
 export function growSnake() {
-  newSegments += 1
+  newSquares += 1
 }
 
 export function onSnakeCheck(pos) {
@@ -46,11 +46,11 @@ export function snakeIntersectCheck() {
   }
 }
 
-function addSegments() {
-  for (let i = 0; i < newSegments; i++) {
+function addSquares() {
+  for (let i = 0; i < newSquares; i++) {
     snakeBody.push({ ...snakeBody[snakeBody.length - 1] })
   }
-  newSegments = 0
+  newSquares = 0
 }
 
 window.addEventListener('keydown', moveSnake)
@@ -77,7 +77,7 @@ function moveSnake(event) {
   }
 }
 
-function getInputDirection() {
+function getInputDir() {
   lastInputDir = inputDir
   return inputDir
 }

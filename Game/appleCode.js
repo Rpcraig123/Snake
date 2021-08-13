@@ -2,8 +2,8 @@ import { onSnakeCheck, growSnake } from './snakeCode.js'
 
 let apple = getRandomPos()
 let points = 0
-export const point_dis = document.querySelector("#Points")
 let sound = new Audio("score-sound.mp3");
+export const point_dis = document.querySelector("#Points")
 
 export function updateApple() {
   if (onSnakeCheck(apple) === true) {
