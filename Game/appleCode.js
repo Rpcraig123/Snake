@@ -24,10 +24,10 @@ export function drawApple() {
 }
 
  export function getRandomPos() {
-  let newFoodPosition = {
+  let newApplePos = {
     x: Math.ceil(Math.random() * 20),
     y: Math.ceil(Math.random() * 20)
   }
-  return newFoodPosition
+  return newApplePos
 }
   
