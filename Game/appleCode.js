@@ -31,7 +31,7 @@ export function drawApple() {
   let snakeCells = document.querySelectorAll('.snake')
   for (let i = 1; i < snakeCells.length; i++) {
     if (snakeCells[i].style.gridColumnStart == newApplePos.x && snakeCells[i].style.gridRowStart == newApplePos.y) {
-      apple = getRandomPos()
+      newApplePos = getRandomPos()
     }
   }
   return newApplePos
