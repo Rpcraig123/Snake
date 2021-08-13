@@ -43,7 +43,7 @@ function restart() {
   window.location.reload()
 }
 
-export function outsideGridCheck(pos) {
+function outsideGridCheck(pos) {
   if (pos.x < 1 || pos.x > 20 || pos.y < 1 || pos.y > 20) {
       return true
   }

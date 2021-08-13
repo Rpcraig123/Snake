@@ -1,7 +1,7 @@
 import { onSnakeCheck, growSnake } from './snakeCode.js'
 
 let apple = getRandomPos()
-export let points = 0
+let points = 0
 export const point_dis = document.querySelector("#Points")
 let sound = new Audio("score-sound.mp3");
 
@@ -23,7 +23,7 @@ export function drawApple() {
   document.querySelector("#game-board").appendChild(appleElement)
 }
 
- export function getRandomPos() {
+ function getRandomPos() {
   let newApplePos = {
     x: Math.ceil(Math.random() * 20),
     y: Math.ceil(Math.random() * 20)
