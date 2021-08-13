@@ -1,6 +1,6 @@
-import { getInputDirection } from "./input.js"
-
-export const SNAKE_SPEED = 7
+let inputDir = { x: 0, y: 0 }
+let lastInputDir = inputDir
+export const snakeSpeed = 7
 let snakeBody = [{ x: 12, y: 17 }]
 let newSegments = 0
 export let snakeHead = snakeBody[0]
@@ -26,19 +26,19 @@ export function drawSnake() {
   })
 }
 
-export function expandSnake(amount) {
-  newSegments += amount
+export function growSnake() {
+  newSegments += 1
 }
 
-export function onSnake(position) {
+export function onSnakeCheck(pos) {
   for (let i = 0; i < snakeBody.length; i++) {
-    if (snakeBody[i].x === position.x && snakeBody[i].y === position.y) {
+    if (snakeBody[i].x === pos.x && snakeBody[i].y === pos.y) {
       return true
     }
   }
 }
 
-export function snakeIntersection() {
+export function snakeIntersectCheck() {
   for (let i = 1; i < snakeBody.length; i++) {
     if (snakeBody[i].x == snakeHead.x && snakeBody[i].y == snakeHead.y) {
       return true
@@ -51,4 +51,33 @@ function addSegments() {
     snakeBody.push({ ...snakeBody[snakeBody.length - 1] })
   }
   newSegments = 0
+}
+
+window.addEventListener('keydown', moveSnake)
+
+function moveSnake(event) {
+  event.preventDefault()
+  switch (event.key) {
+    case 'ArrowUp':
+      if (lastInputDir.y !== 0) break
+      inputDir = { x: 0, y: -1 }
+      break
+    case 'ArrowDown':
+      if (lastInputDir.y !== 0) break
+      inputDir = { x: 0, y: 1 }
+      break
+    case 'ArrowLeft':
+      if (lastInputDir.x !== 0) break
+      inputDir = { x: -1, y: 0 }
+      break
+    case 'ArrowRight':
+      if (lastInputDir.x !== 0) break
+      inputDir = { x: 1, y: 0 }
+      break
+  }
+}
+
+function getInputDirection() {
+  lastInputDir = inputDir
+  return inputDir
 }
